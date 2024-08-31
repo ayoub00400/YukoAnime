@@ -40,3 +40,32 @@ class AppTypography {
   static const appFontSize4 = 12.0;
   static const appFontSize5 = 10.0;
 }
+
+class AppSpacings {
+  //padding
+  static const double extraSmallPadding = 4;
+  static const double smallPadding = 8;
+  static const double mediumPadding = 16;
+  static const double halfMediumPadding = 24;
+  static const double largePadding = 32;
+  static const double extraLargePadding = 64;
+  //spacing
+  static const double extraSmallSpacing = 4;
+  static const double smallSpacing = 8;
+  static const double mediumSpacing = 16;
+  static const double halfMediumSpacing = 24;
+  static const double largeSpacing = 32;
+  static const double extraLargeSpacing = 48;
+  //radius
+  static const double extraSmallRadius = 10;
+  static const double smallRadius = 20;
+  static const double mediumRadius = 40;
+  static const double largeRadius = 60;
+  static const double extraLargeRadius = 80;
+  static String font = '';
+  //icon Size:
+  static const double smallIconSize = 10;
+  static const double mediumIconSize = 20;
+  static const double halfMediumIconSize = 25;
+  static const double largIconSize = 30;
+}
