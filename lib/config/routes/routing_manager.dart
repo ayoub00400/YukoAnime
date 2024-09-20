@@ -1,16 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:template_project/view/screens/splash/splash.dart';
+
+import '../../view/screens/onboarding/onboarding.dart';
 
 class RoutingManager {
   static const String placeHolderScreenPath = '/PlaceHolderScreenPath';
+  static const String splashScreenPath = '/splashScreenPath';
+  static const String onboardingScreenPath = '/onboardingScreenPath';
 
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: placeHolderScreenPath,
+    initialLocation: splashScreenPath,
     debugLogDiagnostics: true,
     routes: [
+      GoRoute(
+        name: splashScreenPath,
+        path: splashScreenPath,
+        builder: (context, state) {
+          return const SplashScreen();
+        },
+      ),
+      GoRoute(
+        name: onboardingScreenPath,
+        path: onboardingScreenPath,
+        builder: (context, state) {
+          return const OnboardingScreen();
+        },
+      ),
       GoRoute(
         name: placeHolderScreenPath,
         path: placeHolderScreenPath,
