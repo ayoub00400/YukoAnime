@@ -62,7 +62,6 @@ class AppSpacings {
   static const double mediumRadius = 40;
   static const double largeRadius = 60;
   static const double extraLargeRadius = 80;
-  static String font = '';
   //icon Size:
   static const double smallIconSize = 10;
   static const double mediumIconSize = 20;

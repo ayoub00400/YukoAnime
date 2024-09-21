@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/constants.dart';
-import '../../utils/extensions/app_context_helper.dart';
 
+// ignore: must_be_immutable
 class CommonButton extends StatelessWidget {
   final Function onTap;
   final bool isLoading;
@@ -44,7 +43,8 @@ class CommonButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: verticalPadding, horizontal: horizontalPadding),
+      padding: EdgeInsets.symmetric(
+          vertical: verticalPadding, horizontal: horizontalPadding),
       child: MaterialButton(
         color: color,
         disabledColor: AppColorsPallette.secondaryColors[3],
@@ -75,10 +75,12 @@ class CommonButton extends StatelessWidget {
     );
   }
 
-  dynamic getButtonShape(bool isRectangular, bool isBorderEnabled, Color borderColor) {
+  dynamic getButtonShape(
+      bool isRectangular, bool isBorderEnabled, Color borderColor) {
     if (isRectangular) {
       return RoundedRectangleBorder(
-        side: isBorderEnabled ? BorderSide(color: borderColor) : BorderSide.none,
+        side:
+            isBorderEnabled ? BorderSide(color: borderColor) : BorderSide.none,
         borderRadius: BorderRadius.circular(radiusValue),
       );
     } else {

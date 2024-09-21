@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:template_project/view/common/button_widget.dart';
 
 import '../../utils/constants.dart';
-import '../../utils/extensions/app_context_helper.dart';
 
+// ignore: must_be_immutable
 class CommonIconButton extends CommonButton {
   IconData? trailingIcon;
   Function? onIconTapped;
