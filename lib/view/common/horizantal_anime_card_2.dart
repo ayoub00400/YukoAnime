@@ -9,13 +9,19 @@ class HorizontalAnimeCard2 extends StatelessWidget {
   final String imgPath;
 
   const HorizontalAnimeCard2(
-      {super.key, required this.animeTitle, required this.animeType, this.height = 100, required this.imgPath});
+      {super.key,
+      required this.animeTitle,
+      required this.animeType,
+      this.height = 150,
+      required this.imgPath});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(AppSpacings.smallPadding),
-      decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(AppSpacings.extraSmallRadius)),
+      decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(AppSpacings.extraSmallRadius)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -26,10 +32,13 @@ class HorizontalAnimeCard2 extends StatelessWidget {
               Container(
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(
-                    color: Colors.black, borderRadius: BorderRadius.circular(AppSpacings.extraSmallRadius)),
+                    color: Colors.black,
+                    borderRadius:
+                        BorderRadius.circular(AppSpacings.extraSmallRadius)),
                 child: CachedNetworkImage(
-                    fit: BoxFit.fitHeight,
-                    progressIndicatorBuilder: (context, url, progress) => Transform.scale(
+                    fit: BoxFit.fill,
+                    progressIndicatorBuilder: (context, url, progress) =>
+                        Transform.scale(
                           scale: .5,
                           child: const CircularProgressIndicator.adaptive(),
                         ),
@@ -42,59 +51,73 @@ class HorizontalAnimeCard2 extends StatelessWidget {
               ),
               SizedBox(
                 height: height,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(animeTitle,
-                        softWrap: true,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppTypography.appFont(
-                          fontSize: AppTypography.appFontSize3,
-                          color: AppColorsPallette.lightThemeColors.first,
-                        )),
-                    const SizedBox(
-                      height: AppSpacings.mediumSpacing,
-                    ),
-                    Text('S1 E1',
-                        softWrap: true,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppTypography.appFont(
-                          fontSize: AppTypography.appFontSize5,
-                          color: AppColorsPallette.lightThemeColors[3],
-                        )),
-                    const SizedBox(
-                      height: AppSpacings.mediumSpacing,
-                    ),
-                    Row(
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          animeType,
-                          style: AppTypography.appFont(
-                              color: AppColorsPallette.lightThemeColors.first, fontSize: AppTypography.appFontSize4),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: AppSpacings.extraSmallSpacing),
-                          child: Text(
-                            '•',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                        Text(
-                          'Sub | Dub',
-                          style: AppTypography.appFont(
-                              color: AppColorsPallette.lightThemeColors.last, fontSize: AppTypography.appFontSize4),
-                        ),
+                        Text(animeTitle,
+                            softWrap: true,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTypography.appFont(
+                              fontSize: AppTypography.appFontSize3,
+                              color: AppColorsPallette.lightThemeColors.first,
+                            )),
                         const SizedBox(
-                          width: AppSpacings.largeSpacing,
+                          height: AppSpacings.mediumSpacing,
                         ),
-                        Icon(
-                          Icons.more_vert,
-                          size: 18,
-                          color: AppColorsPallette.lightThemeColors[0],
-                        )
+                        Text('S1 E1',
+                            softWrap: true,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTypography.appFont(
+                              fontSize: AppTypography.appFontSize5,
+                              color: AppColorsPallette.lightThemeColors[3],
+                            )),
+                        const SizedBox(
+                          height: AppSpacings.mediumSpacing,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              animeType,
+                              style: AppTypography.appFont(
+                                  color:
+                                      AppColorsPallette.lightThemeColors.first,
+                                  fontSize: AppTypography.appFontSize4),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: AppSpacings.extraSmallSpacing),
+                              child: Text(
+                                '•',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            Text(
+                              'Sub | Dub',
+                              style: AppTypography.appFont(
+                                  color:
+                                      AppColorsPallette.lightThemeColors.last,
+                                  fontSize: AppTypography.appFontSize4),
+                            ),
+                            const SizedBox(
+                              width: AppSpacings.largeSpacing,
+                            ),
+                          ],
+                        ),
                       ],
                     ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.more_vert,
+                        size: 18,
+                        color: AppColorsPallette.lightThemeColors[0],
+                      ),
+                    )
                   ],
                 ),
               ),
