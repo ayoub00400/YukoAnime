@@ -1,14 +1,18 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:template_project/utils/constants.dart';
+import 'package:template_project/view/common/magra_card.dart';
 
-class AnimeCard2 extends StatelessWidget {
-  final String animeTitle;
+class AnimeCard2 extends MangaCard {
   final String animeType;
-  final double width;
-  final double height;
+
   const AnimeCard2(
-      {super.key, required this.animeTitle, required this.animeType, required this.width, this.height = 300});
+      {super.key,
+      required super.animeTitle,
+      required this.animeType,
+      required super.width,
+      super.height = 300,
+      required super.imgPath});
 
   @override
   Widget build(BuildContext context) {
