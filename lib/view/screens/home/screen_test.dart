@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../common/anime_card_2.dart';
 import '../../common/card_widget.dart';
 
 class ScreenTest extends StatelessWidget {
@@ -9,13 +10,11 @@ class ScreenTest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: CardAnime(
-          onTap: () {},
-          selectedTime: 400,
-          totalTime: 1020,
-          title: "tokyo ghol",
-          subtitle: "dsfsd",
-          image:
+        child: AnimeCard2(
+          width: 200,
+          animeType: "tokyo ghol",
+          animeTitle: "dsfsd",
+          imagePath:
               "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/Kaneki-Ken-Featured-Image.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5",
         ),
       ),
