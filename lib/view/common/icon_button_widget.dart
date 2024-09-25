@@ -5,7 +5,7 @@ import '../../utils/constants.dart';
 
 // ignore: must_be_immutable
 class CommonIconButton extends CommonButton {
-  IconData? trailingIcon;
+  Icon trailingIcon;
   Function? onIconTapped;
 
   CommonIconButton(
@@ -14,15 +14,16 @@ class CommonIconButton extends CommonButton {
       super.isLoading,
       required super.label,
       super.color,
-      required super.isBorderEnabled,
-      required super.borderColor,
+      super.isBorderEnabled,
+      super.borderColor,
       super.labelColor = Colors.white,
       required super.height,
       super.loadingColor = Colors.white,
       super.minWidth = 100,
       required super.radiusValue,
       super.isRectangular = true,
-      this.trailingIcon,
+      required this.trailingIcon,
+      super.contentPadding,
       this.onIconTapped});
 
   @override
@@ -32,15 +33,13 @@ class CommonIconButton extends CommonButton {
       children: [
         super.build(context),
         IconButton(
-          style: ButtonStyle(
-            shape: MaterialStatePropertyAll(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(AppSpacings.smallRadius),
-              ),
+          style: const ButtonStyle(
+            shape: WidgetStatePropertyAll(
+              RoundedRectangleBorder(side: BorderSide(color: Colors.white)),
             ),
           ),
           onPressed: () => onIconTapped,
-          icon: const Icon(Icons.abc),
+          icon: trailingIcon,
         )
       ],
     );

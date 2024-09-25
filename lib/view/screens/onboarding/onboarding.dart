@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:template_project/utils/Go.dart';
 import 'package:template_project/utils/constants.dart';
 import 'package:template_project/view/common/button_widget.dart';
+import 'package:template_project/view/screens/home/home.dart';
 
 import '../../../utils/images_strings.dart';
-import '../home/screen_test.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -34,53 +33,45 @@ class OnboardingScreen extends StatelessWidget {
                 gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
-                    colors: [
-                  Colors.black87,
-                  Colors.black54,
-                  Colors.transparent
-                ])),
+                    colors: [Colors.black87, Colors.black54, Colors.transparent])),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.min,
               children: [
                 const Text(
                   "Watch, Read, Shop, Connect",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: AppTypography.appFontSize1),
+                  style: TextStyle(color: Colors.white, fontSize: AppTypography.appFontSize1),
                 ),
                 const SizedBox(
-                  height: AppSpacings.mediumSpacing,
+                  height: AppSizes.mediumSpacing,
                 ),
                 const Text(
                   "All in One Place!",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: AppTypography.appFontSize2),
+                  style: TextStyle(color: Colors.white, fontSize: AppTypography.appFontSize2),
                 ),
                 CommonButton(
                   onTap: () {
-                    Go.to(context, ScreenTest());
+                    Go.to(context, const HomeScreen());
                   },
                   label: 'Get Started',
                   height: 50,
                   labelColor: AppColorsPallette.darkThemeColors[0],
-                  horizontalPadding: AppSpacings.mediumPadding,
-                  verticalPadding: AppSpacings.mediumPadding,
+                  horizontalPadding: AppSizes.mediumPadding,
+                  verticalPadding: AppSizes.mediumPadding,
                   minWidth: double.maxFinite,
-                  radiusValue: AppSpacings.extraSmallRadius,
-                  color: AppColorsPallette.secondaryColors[0],
+                  radiusValue: AppSizes.extraSmallRadius,
+                  color: AppColorsPallette.primaryColors[0],
                 ),
                 CommonButton(
                     onTap: () {},
                     label: 'login',
                     height: 50,
                     isBorderEnabled: true,
-                    borderColor: AppColorsPallette.secondaryColors[0],
-                    horizontalPadding: AppSpacings.mediumPadding,
-                    verticalPadding: AppSpacings.mediumPadding,
+                    borderColor: AppColorsPallette.primaryColors[0],
+                    horizontalPadding: AppSizes.mediumPadding,
+                    verticalPadding: AppSizes.mediumPadding,
                     minWidth: double.maxFinite,
-                    radiusValue: AppSpacings.extraSmallRadius,
+                    radiusValue: AppSizes.extraSmallRadius,
                     color: Colors.transparent)
               ],
             ),

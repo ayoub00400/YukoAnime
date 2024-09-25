@@ -9,19 +9,13 @@ class HorizontalAnimeCard2 extends StatelessWidget {
   final String imgPath;
 
   const HorizontalAnimeCard2(
-      {super.key,
-      required this.animeTitle,
-      required this.animeType,
-      this.height = 150,
-      required this.imgPath});
+      {super.key, required this.animeTitle, required this.animeType, this.height = 150, required this.imgPath});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(AppSpacings.smallPadding),
-      decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(AppSpacings.extraSmallRadius)),
+      padding: const EdgeInsets.all(AppSizes.smallPadding),
+      decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(AppSizes.extraSmallRadius)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -31,14 +25,11 @@ class HorizontalAnimeCard2 extends StatelessWidget {
             children: [
               Container(
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius:
-                        BorderRadius.circular(AppSpacings.extraSmallRadius)),
+                decoration:
+                    BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(AppSizes.extraSmallRadius)),
                 child: CachedNetworkImage(
                     fit: BoxFit.fill,
-                    progressIndicatorBuilder: (context, url, progress) =>
-                        Transform.scale(
+                    progressIndicatorBuilder: (context, url, progress) => Transform.scale(
                           scale: .5,
                           child: const CircularProgressIndicator.adaptive(),
                         ),
@@ -66,7 +57,7 @@ class HorizontalAnimeCard2 extends StatelessWidget {
                               color: AppColorsPallette.lightThemeColors.first,
                             )),
                         const SizedBox(
-                          height: AppSpacings.mediumSpacing,
+                          height: AppSizes.mediumSpacing,
                         ),
                         Text('S1 E1',
                             softWrap: true,
@@ -76,7 +67,7 @@ class HorizontalAnimeCard2 extends StatelessWidget {
                               color: AppColorsPallette.lightThemeColors[3],
                             )),
                         const SizedBox(
-                          height: AppSpacings.mediumSpacing,
+                          height: AppSizes.mediumSpacing,
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,13 +75,11 @@ class HorizontalAnimeCard2 extends StatelessWidget {
                             Text(
                               animeType,
                               style: AppTypography.appFont(
-                                  color:
-                                      AppColorsPallette.lightThemeColors.first,
+                                  color: AppColorsPallette.lightThemeColors.first,
                                   fontSize: AppTypography.appFontSize4),
                             ),
                             const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: AppSpacings.extraSmallSpacing),
+                              padding: EdgeInsets.symmetric(horizontal: AppSizes.extraSmallSpacing),
                               child: Text(
                                 '•',
                                 style: TextStyle(color: Colors.white),
@@ -99,12 +88,10 @@ class HorizontalAnimeCard2 extends StatelessWidget {
                             Text(
                               'Sub | Dub',
                               style: AppTypography.appFont(
-                                  color:
-                                      AppColorsPallette.lightThemeColors.last,
-                                  fontSize: AppTypography.appFontSize4),
+                                  color: AppColorsPallette.lightThemeColors.last, fontSize: AppTypography.appFontSize4),
                             ),
                             const SizedBox(
-                              width: AppSpacings.largeSpacing,
+                              width: AppSizes.largeSpacing,
                             ),
                           ],
                         ),

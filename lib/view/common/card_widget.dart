@@ -40,7 +40,7 @@ class CardAnime extends StatelessWidget {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.all(AppSpacings.smallPadding),
+              padding: const EdgeInsets.all(AppSizes.smallPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -77,7 +77,7 @@ class CardAnime extends StatelessWidget {
             Center(
               child: Icon(
                 Icons.play_circle_outline_outlined,
-                size: AppSpacings.largIconSize,
+                size: AppSizes.largIconSize,
                 color: AppColorsPallette.lightThemeColors[0],
               ),
             ),
@@ -86,9 +86,9 @@ class CardAnime extends StatelessWidget {
               left: 0,
               child: Container(
                 width: calculateProgressWidth(),
-                height: AppSpacings.smallSpacing,
+                height: AppSizes.smallSpacing,
                 decoration: BoxDecoration(
-                  color: AppColorsPallette.secondaryColors[1],
+                  color: AppColorsPallette.primaryColors[1],
                   borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(8),
                     topRight: Radius.circular(8),
