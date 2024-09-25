@@ -23,7 +23,8 @@ class AppBarWidget extends StatelessWidget {
       height: 60,
       width: double.maxFinite,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.baseline,
+        textBaseline: TextBaseline.alphabetic,
         children: [
           leading ?? const SizedBox(),
           const SizedBox(
@@ -31,7 +32,7 @@ class AppBarWidget extends StatelessWidget {
           ),
           title,
           const Spacer(),
-          if (trailling != null) Row(children: [...trailling!]),
+          if (trailling != null) Row(crossAxisAlignment: CrossAxisAlignment.center, children: [...trailling!]),
         ],
       ),
     );

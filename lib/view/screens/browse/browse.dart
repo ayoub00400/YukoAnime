@@ -29,12 +29,12 @@ class BrowseScreen extends StatelessWidget {
                   style: AppTypography.appFont(
                       fontWeight: AppTypography.appFontBold,
                       color: AppColorsPallette.lightThemeColors[0],
-                      fontSize: AppTypography.appFontSize2),
+                      fontSize: AppTypography.appFontSize1),
                 ),
                 trailling: [
                   FaIcon(
                     FontAwesomeIcons.magnifyingGlass,
-                    size: 20,
+                    size: AppSizes.mediumIconSize,
                     color: AppColorsPallette.lightThemeColors[0],
                   ),
                   const SizedBox(
@@ -42,7 +42,7 @@ class BrowseScreen extends StatelessWidget {
                   ),
                   FaIcon(
                     FontAwesomeIcons.circleDown,
-                    size: 20,
+                    size: AppSizes.mediumIconSize,
                     color: AppColorsPallette.lightThemeColors[0],
                   )
                 ],

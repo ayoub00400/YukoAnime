@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           physics: const AlwaysScrollableScrollPhysics(),
           child: Column(
             children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 1.5 / 3, child: FeaturedAnimeScreen()),
+              SizedBox(height: MediaQuery.of(context).size.height * 1.5 / 3, child: FeaturedAnimeSection()),
               const TopTrendingSection(),
               const MangaSection()
             ],
