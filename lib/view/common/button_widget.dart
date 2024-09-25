@@ -67,12 +67,14 @@ class CommonButton extends StatelessWidget {
                   ),
                 ),
               )
-            : Text(label,
-                style: AppTypography.appFont(
-                  color: labelColor,
-                  fontWeight: FontWeight.bold,
-                  fontSize: fontSize,
-                )),
+            : Flexible(
+                child: Text(label,
+                    style: AppTypography.appFont(
+                      color: labelColor,
+                      fontWeight: AppTypography.appFontRegular,
+                      fontSize: fontSize,
+                    )),
+              ),
       ),
     );
   }

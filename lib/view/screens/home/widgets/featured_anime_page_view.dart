@@ -63,7 +63,7 @@ class FeaturedAnimeScreen extends StatelessWidget {
             CommonIconButton(
               onTap: () {},
               onIconTapped: () {},
-              height: 45,
+              height: AppSizes.buttonHeight,
               color: AppColorsPallette.primaryColors[0],
               radiusValue: AppSizes.extraSmallRadius / 2,
               label: 'Play',
