@@ -14,7 +14,7 @@ class AppColorsPallette {
     Color.fromARGB(255, 67, 67, 67),
     Color.fromARGB(255, 118, 118, 118)
   ];
-  static const secondaryColors = [
+  static const primaryColors = [
     Color.fromARGB(255, 255, 107, 1),
     Color.fromARGB(255, 255, 137, 1),
     Color.fromARGB(255, 255, 196, 154),
@@ -41,7 +41,7 @@ class AppTypography {
   static const appFontSize5 = 10.0;
 }
 
-class AppSpacings {
+class AppSizes {
   //padding
   static const double extraSmallPadding = 4;
   static const double smallPadding = 8;
@@ -64,6 +64,7 @@ class AppSpacings {
   static const double extraLargeRadius = 80;
   //icon Size:
   static const double smallIconSize = 10;
+  static const double smallToMediumIconSize = 16;
   static const double mediumIconSize = 20;
   static const double halfMediumIconSize = 25;
   static const double largIconSize = 30;
