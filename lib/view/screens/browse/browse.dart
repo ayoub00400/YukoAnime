@@ -4,10 +4,11 @@ import 'package:template_project/utils/constants.dart';
 import 'package:template_project/view/common/app_bar_widget.dart';
 import 'package:template_project/view/screens/my_list/widgets/recently_added_section.dart';
 
+import 'widgets/all_gonres.dart';
 import 'widgets/filter_section.dart';
 
-class MyListScreen extends StatelessWidget {
-  const MyListScreen({super.key});
+class BrowseScreen extends StatelessWidget {
+  const BrowseScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class MyListScreen extends StatelessWidget {
               AppBarWidget(
                 bgColor: Colors.black,
                 title: Text(
-                  "My List",
+                  "Browse",
                   style: AppTypography.appFont(
                       fontWeight: AppTypography.appFontBold,
                       color: AppColorsPallette.lightThemeColors[0],
@@ -50,7 +51,7 @@ class MyListScreen extends StatelessWidget {
               const SizedBox(
                 height: AppSizes.smallPadding,
               ),
-              const Expanded(child: RecentlyAddedSection())
+              const Expanded(child: AllGonresSection())
             ],
           ),
         ),

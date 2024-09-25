@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/constants.dart';
-import '../../utils/extensions/app_context_helper.dart';
 
 class AppBarWidget extends StatelessWidget {
   final Widget title;
