@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:template_project/view/screens/browse/browse.dart';
 
-import 'view/screens/profile/profile.dart';
-import 'view/screens/shop/shop.dart';
+import 'config/routes/routing_manager.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const YukoAnimeApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class YukoAnimeApp extends StatelessWidget {
+  const YukoAnimeApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Flutter Demo', debugShowCheckedModeBanner: false, home: ProfileScreen());
+    return MaterialApp.router(
+      title: 'Yuko Anime',
+      debugShowCheckedModeBanner: false,
+      routerConfig: RoutingManager.router,
+    );
   }
 }
