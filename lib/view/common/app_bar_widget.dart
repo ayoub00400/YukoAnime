@@ -20,10 +20,9 @@ class AppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: bgColor,
-      height: 60,
       width: double.maxFinite,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.baseline,
+        crossAxisAlignment: CrossAxisAlignment.start,
         textBaseline: TextBaseline.alphabetic,
         children: [
           leading ?? const SizedBox(),

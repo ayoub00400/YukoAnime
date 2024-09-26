@@ -4,9 +4,11 @@ import 'package:template_project/view/screens/browse/browse.dart';
 import 'package:template_project/view/screens/home/home.dart';
 import 'package:template_project/view/screens/my_list/my_list.dart';
 import 'package:template_project/view/screens/profile/profile.dart';
+import 'package:template_project/view/screens/profile_settings/profile_settings.dart';
 import 'package:template_project/view/screens/shop/shop.dart';
 import 'package:template_project/view/screens/splash/splash.dart';
 
+import '../../view/screens/anime_details/anime_details.dart';
 import '../../view/screens/onboarding/onboarding.dart';
 
 class RoutingManager {
@@ -17,14 +19,30 @@ class RoutingManager {
   static const String shopScreenPath = '/shopScreenPath';
   static const String browseScreenPath = '/browseScreenPath';
   static const String myListScreenPath = '/myListScreenPath';
+  static const String profileSettingsScreenPath = '/ProfileSettignsScreenPath';
+  static const String animeDetailsScreenPath = '/animeDetailsScreenPath';
 
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: splashScreenPath,
+    initialLocation: animeDetailsScreenPath,
     debugLogDiagnostics: true,
     routes: [
+      GoRoute(
+        name: animeDetailsScreenPath,
+        path: animeDetailsScreenPath,
+        builder: (context, state) {
+          return const AnimeDetailsScreen();
+        },
+      ),
+      GoRoute(
+        name: profileSettingsScreenPath,
+        path: profileSettingsScreenPath,
+        builder: (context, state) {
+          return const ProfileSettingsScreen();
+        },
+      ),
       GoRoute(
         name: myListScreenPath,
         path: myListScreenPath,
