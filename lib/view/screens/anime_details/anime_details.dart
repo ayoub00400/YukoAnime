@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:template_project/utils/constants.dart';
+import 'package:template_project/view/common/icon_button_widget.dart';
 
 import '../../common/app_bar_widget.dart';
 import 'widgets/body_section.dart';
@@ -60,6 +61,19 @@ class _AnimeDetailsScreenState extends State<AnimeDetailsScreen> {
               ],
             ),
           ),
+          Positioned(
+            bottom: 16,
+            left: 8,
+            right: 8,
+            child: CommonIconButton(
+                onTap: () {},
+                label: 'Watch now',
+                color: AppColorsPallette.primaryColors.first,
+                height: 40,
+                minWidth: MediaQuery.of(context).size.width * 3 / 4,
+                radiusValue: 5,
+                trailingIcon: const Icon(Icons.save)),
+          )
         ],
       )),
     );

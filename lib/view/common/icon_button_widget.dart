@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:template_project/view/common/button_widget.dart';
 
-
 // ignore: must_be_immutable
 class CommonIconButton extends CommonButton {
   Icon trailingIcon;

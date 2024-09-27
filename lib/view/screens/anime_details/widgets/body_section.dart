@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:template_project/utils/constants.dart';
 
-import 'episodes.dart';
+import 'episodes_filter.dart';
+import 'episodes_list.dart';
 
 class BodySection extends StatefulWidget {
   const BodySection({super.key});
@@ -34,6 +35,7 @@ class _BodySectionState extends State<BodySection> with SingleTickerProviderStat
             automaticIndicatorColorAdjustment: true,
             isScrollable: true,
             controller: _tabController,
+
             tabAlignment: TabAlignment.start,
             tabs: const [
               Tab(
@@ -41,6 +43,10 @@ class _BodySectionState extends State<BodySection> with SingleTickerProviderStat
               ),
             ],
           ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: AppSizes.smallPadding),
+          child: EpisodesFilter(),
         ),
         ValueListenableBuilder(
             valueListenable: _pageIndex,
