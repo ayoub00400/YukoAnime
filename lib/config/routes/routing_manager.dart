@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:template_project/view/screens/browse/browse.dart';
 import 'package:template_project/view/screens/home/home.dart';
+import 'package:template_project/view/screens/login/login.dart';
 import 'package:template_project/view/screens/my_list/my_list.dart';
 import 'package:template_project/view/screens/profile/profile.dart';
 import 'package:template_project/view/screens/profile_settings/profile_settings.dart';
@@ -15,6 +16,7 @@ class RoutingManager {
   static const String splashScreenPath = '/splashScreenPath';
   static const String onboardingScreenPath = '/onboardingScreenPath';
   static const String homeScreenPath = '/homeScreenPath';
+  static const String loginScreenPath = '/loginScreenPath';
   static const String profileScreenPath = '/profileScreenPath';
   static const String shopScreenPath = '/shopScreenPath';
   static const String browseScreenPath = '/browseScreenPath';
@@ -26,9 +28,16 @@ class RoutingManager {
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: animeDetailsScreenPath,
+    initialLocation: loginScreenPath,
     debugLogDiagnostics: true,
     routes: [
+      GoRoute(
+        name: loginScreenPath,
+        path: loginScreenPath,
+        builder: (context, state) {
+          return const LoginScreen();
+        },
+      ),
       GoRoute(
         name: animeDetailsScreenPath,
         path: animeDetailsScreenPath,
