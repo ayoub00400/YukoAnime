@@ -10,8 +10,8 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: AppSizes.smallPadding, horizontal: AppSizes.smallPadding),
-      padding: const EdgeInsets.symmetric(vertical: AppSizes.smallPadding, horizontal: AppSizes.smallPadding),
+      margin: const EdgeInsets.symmetric(vertical: AppSizes.mediumPadding, horizontal: AppSizes.mediumPadding),
+      padding: const EdgeInsets.symmetric(vertical: AppSizes.mediumPadding, horizontal: AppSizes.mediumPadding),
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

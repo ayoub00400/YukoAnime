@@ -27,15 +27,15 @@ class MangaCard extends StatelessWidget {
         children: [
           Expanded(
             child: CachedNetworkImage(
-                fit: BoxFit.fill,
-                progressIndicatorBuilder: (context, url, progress) => Transform.scale(
-                      scale: .5,
-                      child: const CircularProgressIndicator.adaptive(),
-                    ),
-                errorWidget: (context, url, error) {
-                  return const Icon(Icons.image);
-                },
-                imageUrl: imgPath),
+              fit: BoxFit.fill,
+              progressIndicatorBuilder: (context, url, progress) =>
+                  const Center(child: SizedBox(height: 30, width: 30, child: CircularProgressIndicator.adaptive())),
+              errorWidget: (context, url, error) {
+                return const Icon(Icons.image);
+              },
+              width: width,
+              imageUrl: imgPath,
+            ),
           ),
           const SizedBox(
             height: AppSizes.extraSmallSpacing,
@@ -48,13 +48,15 @@ class MangaCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(animeTitle,
-                      softWrap: true,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.appFont(
-                        fontSize: AppTypography.appFontSize3,
-                        color: AppColorsPallette.lightThemeColors.first,
-                      )),
+                  SizedBox(
+                      width: width / 1.3,
+                      child: Text(animeTitle,
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTypography.appFont(
+                            fontSize: AppTypography.appFontSize3,
+                            color: AppColorsPallette.lightThemeColors.first,
+                          ))),
                   const Spacer(),
                   Icon(
                     Icons.more_vert,

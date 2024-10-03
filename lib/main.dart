@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'config/routes/routing_manager.dart';
+import 'utils/urls.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+  Urls.baseUrl = dotenv.get('API_BASE_URL');
+
   runApp(const YukoAnimeApp());
 }
 

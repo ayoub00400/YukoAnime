@@ -30,13 +30,12 @@ class AnimeCard2 extends StatelessWidget {
           Expanded(
             child: CachedNetworkImage(
               fit: BoxFit.fill,
-              progressIndicatorBuilder: (context, url, progress) => Transform.scale(
-                scale: .5,
-                child: const CircularProgressIndicator.adaptive(),
-              ),
+              progressIndicatorBuilder: (context, url, progress) =>
+                  const Center(child: SizedBox(height: 30, width: 30, child: CircularProgressIndicator.adaptive())),
               errorWidget: (context, url, error) {
                 return const Icon(Icons.image);
               },
+              width: width,
               imageUrl: imagePath,
             ),
           ),
@@ -48,14 +47,23 @@ class AnimeCard2 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    animeTitle,
-                    style: const TextStyle(color: Colors.white),
+                  SizedBox(
+                    width: width / 1.5,
+                    child: Text(
+                      animeTitle,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTypography.appFont(color: Colors.white, fontSize: AppTypography.appFontSize4),
+                    ),
                   ),
                   if (!ismanga)
-                    Text(
-                      animeType,
-                      style: const TextStyle(color: Colors.white),
+                    SizedBox(
+                      width: width / 1.5,
+                      child: Text(
+                        animeType,
+                        style: AppTypography.appFont(
+                            color: AppColorsPallette.lightThemeColors[3], fontSize: AppTypography.appFontSize5),
+                      ),
                     ),
                 ],
               ),

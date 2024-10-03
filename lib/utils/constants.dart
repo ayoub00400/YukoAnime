@@ -20,6 +20,8 @@ class AppColorsPallette {
     Color.fromARGB(255, 255, 196, 154),
     Color.fromARGB(255, 255, 225, 205)
   ];
+
+  static final appBgColor = darkThemeColors[0];
 }
 
 class AppTypography {

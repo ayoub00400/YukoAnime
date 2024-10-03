@@ -1,56 +1,71 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:template_project/utils/constants.dart';
 
+import '../../../common/error_widget.dart';
+import '../../../common/loading_widget.dart';
 import '../../../common/magra_card.dart';
+import '../cubit/home_cubit.dart';
 
 class MangaSection extends StatelessWidget {
   const MangaSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(AppSizes.smallPadding),
-          child: Row(
-            children: [
-              Text(
-                'Manga',
-                style: AppTypography.appFont(fontSize: 18, fontWeight: FontWeight.w500),
+    return BlocBuilder<HomeCubit, HomeState>(
+      builder: (context, state) {
+        var homeCubit = BlocProvider.of<HomeCubit>(context);
+        if (state is TopTrendingAnimeLoading) {
+          return const LoadingWidget();
+        }
+        if (state is TopTrendingAnimeLoadingFailed) {
+          return const CustomErrorWidget();
+        }
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(AppSizes.smallPadding),
+              child: Row(
+                children: [
+                  Text(
+                    'Manga',
+                    style: AppTypography.appFont(
+                        fontSize: 18, color: AppColorsPallette.lightThemeColors.first, fontWeight: FontWeight.w500),
+                  ),
+                  const Spacer(),
+                  const Text(
+                    'View all',
+                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                  ),
+                ],
               ),
-              const Spacer(),
-              const Text(
-                'View all',
-                style: TextStyle(fontSize: 15, color: Colors.grey),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 250,
-          child: ListView(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              children: List.generate(
-                  10,
-                  (index) => Padding(
-                        padding: index == 0
-                            ? const EdgeInsets.symmetric(horizontal: AppSizes.smallPadding)
-                            : const EdgeInsets.only(right: AppSizes.smallPadding),
-                        child: MangaCard(
-                          animeTitle: 'Manga $index',
-                          width: 220,
-                          height: 250,
-                          imgPath:
-                              'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cool-anime-video-music-album-cover-design-template-70bf413b3c1cf99db9e7a40aec385183_screen.jpg?ts=1633335329',
-                        ),
-                      ))),
-        ),
-        const SizedBox(
-          height: AppSizes.smallSpacing,
-        )
-      ],
+            ),
+            SizedBox(
+              height: 250,
+              child: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: homeCubit.topTrendingMangaList
+                      .mapIndexed((index, e) => Padding(
+                          padding: index == 0
+                              ? const EdgeInsets.symmetric(horizontal: AppSizes.smallPadding)
+                              : const EdgeInsets.only(right: AppSizes.smallPadding),
+                          child: MangaCard(
+                            animeTitle: e.title,
+                            width: 180,
+                            height: 250,
+                            imgPath: e.images['jpg'] != null ? e.images['jpg']!.imageUrl : "",
+                          )))
+                      .toList()),
+            ),
+            const SizedBox(
+              height: AppSizes.smallSpacing,
+            )
+          ],
+        );
+      },
     );
   }
 }

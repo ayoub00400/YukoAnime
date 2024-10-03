@@ -28,7 +28,7 @@ class RoutingManager {
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: loginScreenPath,
+    initialLocation: homeScreenPath,
     debugLogDiagnostics: true,
     routes: [
       GoRoute(

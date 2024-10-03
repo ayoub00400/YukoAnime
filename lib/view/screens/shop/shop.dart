@@ -14,7 +14,7 @@ class ShopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColorsPallette.appBgColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
