@@ -44,10 +44,6 @@ class _BodySectionState extends State<BodySection> with SingleTickerProviderStat
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: AppSizes.smallPadding),
-          child: EpisodesFilter(),
-        ),
         ValueListenableBuilder(
             valueListenable: _pageIndex,
             builder: (context, value, child) {

@@ -2,6 +2,8 @@ import 'package:collection/collection.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:template_project/config/routes/routing_manager.dart';
 import 'package:template_project/utils/constants.dart';
 import 'package:template_project/view/common/anime_card_2.dart';
 import 'package:template_project/view/screens/home/cubit/home_cubit.dart';
@@ -54,6 +56,9 @@ class TopTrendingSection extends StatelessWidget {
                                 ? const EdgeInsets.symmetric(horizontal: AppSizes.smallPadding)
                                 : const EdgeInsets.only(right: AppSizes.smallPadding),
                             child: AnimeCard2(
+                              onTap: () async {
+                                await GoRouter.of(context).pushNamed(RoutingManager.animeDetailsScreenPath, extra: e);
+                              },
                               animeTitle: e.titleEnglish,
                               width: 170,
                               animeType: e.type,

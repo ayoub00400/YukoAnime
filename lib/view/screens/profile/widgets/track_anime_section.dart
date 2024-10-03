@@ -39,6 +39,7 @@ class TopTrendingSection extends StatelessWidget {
                             ? const EdgeInsets.symmetric(horizontal: AppSizes.smallPadding)
                             : const EdgeInsets.only(right: AppSizes.smallPadding),
                         child: AnimeCard2(
+                            onTap: () {},
                             animeTitle: 'Anime $index',
                             width: 170,
                             animeType: "Series",

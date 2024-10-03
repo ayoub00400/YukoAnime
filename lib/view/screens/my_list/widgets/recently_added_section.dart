@@ -29,6 +29,7 @@ class RecentlyAddedSection extends StatelessWidget {
             children: List.generate(
                 10,
                 (index) => AnimeCard2(
+                    onTap: () {},
                     animeTitle: 'Anime $index',
                     width: 170,
                     animeType: "Series",

@@ -6,7 +6,7 @@ import '../../utils/constants.dart';
 
 class AnimeCard2 extends StatelessWidget {
   final bool ismanga;
-
+  final Function onTap;
   final String animeTitle, imagePath, animeType;
   final double width, height;
   const AnimeCard2(
@@ -16,66 +16,70 @@ class AnimeCard2 extends StatelessWidget {
       this.width = 200,
       this.height = 300,
       required this.imagePath,
-      this.ismanga = false});
+      this.ismanga = false,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(8)),
-      height: height,
-      width: width,
-      child: Column(
-        children: [
-          Expanded(
-            child: CachedNetworkImage(
-              fit: BoxFit.fill,
-              progressIndicatorBuilder: (context, url, progress) =>
-                  const Center(child: SizedBox(height: 30, width: 30, child: CircularProgressIndicator.adaptive())),
-              errorWidget: (context, url, error) {
-                return const Icon(Icons.image);
-              },
-              width: width,
-              imageUrl: imagePath,
+    return InkWell(
+      onTap: () => onTap(),
+      child: Container(
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(8)),
+        height: height,
+        width: width,
+        child: Column(
+          children: [
+            Expanded(
+              child: CachedNetworkImage(
+                fit: BoxFit.fill,
+                progressIndicatorBuilder: (context, url, progress) =>
+                    const Center(child: SizedBox(height: 30, width: 30, child: CircularProgressIndicator.adaptive())),
+                errorWidget: (context, url, error) {
+                  return const Icon(Icons.image);
+                },
+                width: width,
+                imageUrl: imagePath,
+              ),
             ),
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: width / 1.5,
-                    child: Text(
-                      animeTitle,
-                      softWrap: true,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.appFont(color: Colors.white, fontSize: AppTypography.appFontSize4),
-                    ),
-                  ),
-                  if (!ismanga)
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     SizedBox(
                       width: width / 1.5,
                       child: Text(
-                        animeType,
-                        style: AppTypography.appFont(
-                            color: AppColorsPallette.lightThemeColors[3], fontSize: AppTypography.appFontSize5),
+                        animeTitle,
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTypography.appFont(color: Colors.white, fontSize: AppTypography.appFontSize4),
                       ),
                     ),
-                ],
-              ),
-              const Spacer(),
-              const Icon(
-                Icons.more_vert,
-                color: Colors.white,
-                size: AppSizes.smallToMediumIconSize,
-              )
-            ],
-          ).paddingAll()
-        ],
+                    if (!ismanga)
+                      SizedBox(
+                        width: width / 1.5,
+                        child: Text(
+                          animeType,
+                          style: AppTypography.appFont(
+                              color: AppColorsPallette.lightThemeColors[3], fontSize: AppTypography.appFontSize5),
+                        ),
+                      ),
+                  ],
+                ),
+                const Spacer(),
+                const Icon(
+                  Icons.more_vert,
+                  color: Colors.white,
+                  size: AppSizes.smallToMediumIconSize,
+                )
+              ],
+            ).paddingAll()
+          ],
+        ),
       ),
     );
   }

@@ -7,7 +7,12 @@ import '../../../../utils/constants.dart';
 import '../../../common/app_bar_widget.dart';
 
 class HeaderSection extends StatelessWidget {
-  const HeaderSection({super.key});
+  final String title;
+
+  final String type;
+  final String imgUrl;
+
+  const HeaderSection({super.key, required this.title, required this.type, required this.imgUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +25,10 @@ class HeaderSection extends StatelessWidget {
             Container(
               height: 250,
               width: double.maxFinite,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                    'https://assets-prd.ignimgs.com/2021/10/14/demonslayer-art-1634244394273.png',
+                    imgUrl,
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -49,9 +54,9 @@ class HeaderSection extends StatelessWidget {
               width: 250,
               decoration: BoxDecoration(
                 border: Border.all(color: AppColorsPallette.primaryColors.first, width: 1),
-                image: const DecorationImage(
+                image: DecorationImage(
                   image: NetworkImage(
-                    'https://assets-prd.ignimgs.com/2021/10/14/demonslayer-art-1634244394273.png',
+                    imgUrl,
                   ),
                   fit: BoxFit.fill,
                 ),
@@ -62,7 +67,7 @@ class HeaderSection extends StatelessWidget {
               height: AppSizes.smallSpacing,
             ),
             Text(
-              "Demon Splayer: Kimetsu no Yaiba",
+              title,
               style: AppTypography.appFont(
                   fontWeight: AppTypography.appFontBold,
                   color: AppColorsPallette.lightThemeColors[0],
@@ -72,7 +77,7 @@ class HeaderSection extends StatelessWidget {
               height: AppSizes.smallSpacing,
             ),
             Text(
-              "Series / Sub|Dub",
+              type,
               style: AppTypography.appFont(
                   fontWeight: AppTypography.appFontRegular,
                   color: AppColorsPallette.lightThemeColors[0],

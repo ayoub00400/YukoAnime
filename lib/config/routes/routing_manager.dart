@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:template_project/model/anime.dart';
 import 'package:template_project/view/screens/browse/browse.dart';
 import 'package:template_project/view/screens/home/home.dart';
 import 'package:template_project/view/screens/login/login.dart';
@@ -42,7 +43,9 @@ class RoutingManager {
         name: animeDetailsScreenPath,
         path: animeDetailsScreenPath,
         builder: (context, state) {
-          return const AnimeDetailsScreen();
+          return AnimeDetailsScreen(
+            animeData: state.extra as Anime,
+          );
         },
       ),
       GoRoute(
