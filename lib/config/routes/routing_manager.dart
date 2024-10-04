@@ -12,6 +12,8 @@ import 'package:template_project/view/screens/splash/splash.dart';
 
 import '../../view/screens/anime_details/anime_details.dart';
 import '../../view/screens/onboarding/onboarding.dart';
+import '../../view/screens/view_all_animes/view_all_animes.dart';
+import '../../view/screens/view_all_mangas/view_all_mangas.dart';
 
 class RoutingManager {
   static const String splashScreenPath = '/splashScreenPath';
@@ -24,6 +26,8 @@ class RoutingManager {
   static const String myListScreenPath = '/myListScreenPath';
   static const String profileSettingsScreenPath = '/ProfileSettignsScreenPath';
   static const String animeDetailsScreenPath = '/animeDetailsScreenPath';
+  static const String viewAllAnimesScreenPath = '/viewAllAnimesScreenPath';
+  static const String viewAllMangasScreenPath = '/viewAllMangasScreenPath';
 
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -37,6 +41,20 @@ class RoutingManager {
         path: loginScreenPath,
         builder: (context, state) {
           return const LoginScreen();
+        },
+      ),
+      GoRoute(
+        name: viewAllMangasScreenPath,
+        path: viewAllMangasScreenPath,
+        builder: (context, state) {
+          return const ViewAllMangasScreen();
+        },
+      ),
+      GoRoute(
+        name: viewAllAnimesScreenPath,
+        path: viewAllAnimesScreenPath,
+        builder: (context, state) {
+          return const ViewAllAnimesScreen();
         },
       ),
       GoRoute(

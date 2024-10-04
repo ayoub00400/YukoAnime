@@ -37,9 +37,12 @@ class TopTrendingSection extends StatelessWidget {
                         fontSize: 18, color: AppColorsPallette.lightThemeColors.first, fontWeight: FontWeight.w500),
                   ),
                   const Spacer(),
-                  const Text(
-                    'View all',
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                  InkWell(
+                    onTap: () => GoRouter.of(context).pushNamed(RoutingManager.viewAllAnimesScreenPath),
+                    child: const Text(
+                      'View all',
+                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                    ),
                   ),
                 ],
               ),

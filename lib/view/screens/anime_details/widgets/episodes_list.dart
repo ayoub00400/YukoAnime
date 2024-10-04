@@ -24,18 +24,31 @@ class EpisodesList extends StatelessWidget {
           children: [
             state is AnimeDetailsLoadFailed
                 ? const SizedBox()
-                : Column(
-                    children: [
-                      const Text("Trailer"),
-                      const SizedBox(
-                        height: AppSizes.mediumSpacing,
-                      ),
-                      SizedBox(
-                          height: 300,
-                          width: double.maxFinite,
-                          child:
-                              WebViewWidget(controller: BlocProvider.of<AnimeDetailsCubit>(context).videoController)),
-                    ],
+                : Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: AppSizes.smallPadding),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: AppSizes.mediumSpacing,
+                        ),
+                        Text(
+                          "Trailer",
+                          style: AppTypography.appFont(
+                              fontWeight: AppTypography.appFontBold,
+                              color: AppColorsPallette.lightThemeColors[0],
+                              fontSize: AppTypography.appFontSize2),
+                        ),
+                        const SizedBox(
+                          height: AppSizes.mediumSpacing,
+                        ),
+                        SizedBox(
+                            height: 300,
+                            width: double.maxFinite,
+                            child:
+                                WebViewWidget(controller: BlocProvider.of<AnimeDetailsCubit>(context).videoController)),
+                      ],
+                    ),
                   ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: AppSizes.smallPadding),

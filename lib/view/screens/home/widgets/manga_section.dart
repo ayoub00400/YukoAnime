@@ -1,8 +1,10 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:template_project/utils/constants.dart';
 
+import '../../../../config/routes/routing_manager.dart';
 import '../../../common/error_widget.dart';
 import '../../../common/loading_widget.dart';
 import '../../../common/magra_card.dart';
@@ -35,9 +37,14 @@ class MangaSection extends StatelessWidget {
                         fontSize: 18, color: AppColorsPallette.lightThemeColors.first, fontWeight: FontWeight.w500),
                   ),
                   const Spacer(),
-                  const Text(
-                    'View all',
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                  InkWell(
+                    onTap: () {
+                      GoRouter.of(context).pushNamed(RoutingManager.viewAllMangasScreenPath);
+                    },
+                    child: const Text(
+                      'View all',
+                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                    ),
                   ),
                 ],
               ),
