@@ -71,5 +71,5 @@ class AppSizes {
   static const double halfMediumIconSize = 25;
   static const double largIconSize = 30;
   //common button
-  static const double buttonHeight = 40;
+  static const double buttonHeight = 35;
 }

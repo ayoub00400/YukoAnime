@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:template_project/model/anime.dart';
 import 'package:template_project/view/screens/browse/browse.dart';
 import 'package:template_project/view/screens/home/home.dart';
+import 'package:template_project/view/screens/app_layout/app_layout.dart';
 import 'package:template_project/view/screens/login/login.dart';
 import 'package:template_project/view/screens/my_list/my_list.dart';
 import 'package:template_project/view/screens/profile/profile.dart';
@@ -19,6 +20,7 @@ class RoutingManager {
   static const String splashScreenPath = '/splashScreenPath';
   static const String onboardingScreenPath = '/onboardingScreenPath';
   static const String homeScreenPath = '/homeScreenPath';
+  static const String homeLayoutScreenPath = '/homeLayoutScreenPath';
   static const String loginScreenPath = '/loginScreenPath';
   static const String profileScreenPath = '/profileScreenPath';
   static const String shopScreenPath = '/shopScreenPath';
@@ -33,9 +35,16 @@ class RoutingManager {
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: homeScreenPath,
+    initialLocation: homeLayoutScreenPath,
     debugLogDiagnostics: true,
     routes: [
+      GoRoute(
+        name: homeLayoutScreenPath,
+        path: homeLayoutScreenPath,
+        builder: (context, state) {
+          return const AppLayoutScreen();
+        },
+      ),
       GoRoute(
         name: loginScreenPath,
         path: loginScreenPath,

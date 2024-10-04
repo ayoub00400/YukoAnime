@@ -15,6 +15,7 @@ class FilterSection extends StatelessWidget {
         children: [
           CommonButton(
             onTap: () {},
+            fontSize: AppTypography.appFontSize3,
             height: AppSizes.buttonHeight,
             color: AppColorsPallette.primaryColors[0],
             radiusValue: AppSizes.extraSmallRadius / 2,
@@ -23,6 +24,7 @@ class FilterSection extends StatelessWidget {
           CommonButton(
             onTap: () {},
             height: AppSizes.buttonHeight,
+            fontSize: AppTypography.appFontSize3,
             color: AppColorsPallette.darkThemeColors[0],
             isBorderEnabled: true,
             borderColor: AppColorsPallette.lightThemeColors[0],
@@ -32,6 +34,7 @@ class FilterSection extends StatelessWidget {
           CommonButton(
             onTap: () {},
             height: AppSizes.buttonHeight,
+            fontSize: AppTypography.appFontSize3,
             color: AppColorsPallette.darkThemeColors[0],
             isBorderEnabled: true,
             borderColor: AppColorsPallette.lightThemeColors[0],

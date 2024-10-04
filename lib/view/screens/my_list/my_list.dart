@@ -50,7 +50,15 @@ class MyListScreen extends StatelessWidget {
               const SizedBox(
                 height: AppSizes.smallPadding,
               ),
-              const Expanded(child: RecentlyAddedSection())
+              const Expanded(
+                child: IndexedStack(
+                  children: [
+                    RecentlyAddedSection(),
+                    RecentlyAddedSection(),
+                    RecentlyAddedSection(),
+                  ],
+                ),
+              )
             ],
           ),
         ),
