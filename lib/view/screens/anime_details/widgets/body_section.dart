@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template_project/utils/constants.dart';
 
-import 'episodes_filter.dart';
 import 'episodes_list.dart';
 
 class BodySection extends StatefulWidget {

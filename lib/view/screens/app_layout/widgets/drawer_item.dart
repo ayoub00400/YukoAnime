@@ -24,7 +24,7 @@ class DrawerItem extends StatelessWidget {
       child: ButtonTheme(
         child: TextButton(
           style: ButtonStyle(
-            padding: MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal: 16, vertical: 2)),
+            padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 16, vertical: 2)),
           ),
           onPressed: onTap,
           child: Row(

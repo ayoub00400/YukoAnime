@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template_project/model/anime.dart';
-import 'package:template_project/view/screens/browse/browse.dart';
-import 'package:template_project/view/screens/home/home.dart';
-import 'package:template_project/view/screens/app_layout/app_layout.dart';
-import 'package:template_project/view/screens/login/login.dart';
-import 'package:template_project/view/screens/my_list/my_list.dart';
-import 'package:template_project/view/screens/profile/profile.dart';
-import 'package:template_project/view/screens/profile_settings/profile_settings.dart';
-import 'package:template_project/view/screens/shop/shop.dart';
-import 'package:template_project/view/screens/splash/splash.dart';
+import 'package:yuko_anime/model/anime.dart';
+import 'package:yuko_anime/view/screens/browse/browse.dart';
+import 'package:yuko_anime/view/screens/home/home.dart';
+import 'package:yuko_anime/view/screens/app_layout/app_layout.dart';
+import 'package:yuko_anime/view/screens/login/login.dart';
+import 'package:yuko_anime/view/screens/my_list/my_list.dart';
+import 'package:yuko_anime/view/screens/profile/profile.dart';
+import 'package:yuko_anime/view/screens/profile_settings/profile_settings.dart';
+import 'package:yuko_anime/view/screens/shop/shop.dart';
+import 'package:yuko_anime/view/screens/splash/splash.dart';
 
 import '../../view/screens/anime_details/anime_details.dart';
 import '../../view/screens/onboarding/onboarding.dart';

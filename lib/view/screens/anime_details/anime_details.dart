@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template_project/model/anime.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/common/icon_button_widget.dart';
+import 'package:yuko_anime/model/anime.dart';
+import 'package:yuko_anime/utils/constants.dart';
+import 'package:yuko_anime/view/common/icon_button_widget.dart';
 
 import '../../common/app_bar_widget.dart';
 import 'cubit/anime_details_cubit.dart';

@@ -1,4 +1,4 @@
-import 'package:template_project/repositories/remote/anime/anime_repository.dart';
+import 'package:yuko_anime/repositories/remote/anime/anime_repository.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../model/anime.dart';

@@ -1,8 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/screens/home/widgets/featured_anime_page_view.dart';
+import 'package:yuko_anime/utils/constants.dart';
 
 import '../../common/app_bar_widget.dart';
 import 'widgets/header.dart';

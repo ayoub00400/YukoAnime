@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/common/anime_card_2.dart';
+import 'package:yuko_anime/utils/constants.dart';
 
 class AboutAnimeSection extends StatelessWidget {
   final double score;

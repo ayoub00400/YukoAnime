@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/utils/extensions/extension_padding.dart';
+import 'package:yuko_anime/utils/constants.dart';
+import 'package:yuko_anime/utils/extensions/extension_padding.dart';
 
 import '../../../common/icon_button_widget.dart';
 import 'featured_anime_item.dart';

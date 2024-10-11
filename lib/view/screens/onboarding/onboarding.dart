@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:template_project/utils/Go.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/common/button_widget.dart';
-import 'package:template_project/view/screens/home/home.dart';
+import 'package:yuko_anime/utils/Go.dart';
+import 'package:yuko_anime/utils/constants.dart';
+import 'package:yuko_anime/view/common/button_widget.dart';
+import 'package:yuko_anime/view/screens/home/home.dart';
 
 import '../../../utils/images_strings.dart';
 

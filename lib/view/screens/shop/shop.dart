@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/common/app_bar_widget.dart';
+import 'package:yuko_anime/utils/constants.dart';
+import 'package:yuko_anime/view/common/app_bar_widget.dart';
 
-import '../home/widgets/featured_anime_page_view.dart';
-import 'widgets/featured_shop_item.dart';
 import 'widgets/featured_shop_page_view.dart';
 import 'widgets/top_trending_section.dart';
 

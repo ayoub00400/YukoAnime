@@ -1,4 +1,4 @@
-package com.example.template_project
+package com.yukoAnime.app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:template_project/utils/extensions/extension_padding.dart';
+import 'package:yuko_anime/utils/extensions/extension_padding.dart';
 
 import '../../utils/constants.dart';
 

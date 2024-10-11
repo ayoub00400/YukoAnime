@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template_project/view/screens/home/cubit/home_cubit.dart';
-import 'package:template_project/view/screens/home/widgets/featured_anime_page_view.dart';
+import 'package:yuko_anime/view/screens/home/cubit/home_cubit.dart';
+import 'package:yuko_anime/view/screens/home/widgets/featured_anime_page_view.dart';
 
 import '../../../utils/constants.dart';
 import 'widgets/manga_section.dart';

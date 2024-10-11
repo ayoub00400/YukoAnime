@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template_project/view/screens/anime_details/cubit/anime_details_cubit.dart';
+import 'package:yuko_anime/view/screens/anime_details/cubit/anime_details_cubit.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../../../utils/constants.dart';
 import '../../../common/horizantal_anime_card_2.dart';

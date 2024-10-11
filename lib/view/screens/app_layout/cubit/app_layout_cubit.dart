@@ -1,7 +1,7 @@
-import 'package:template_project/view/screens/browse/browse.dart';
-import 'package:template_project/view/screens/my_list/my_list.dart';
-import 'package:template_project/view/screens/profile/profile.dart';
-import 'package:template_project/view/screens/shop/shop.dart';
+import 'package:yuko_anime/view/screens/browse/browse.dart';
+import 'package:yuko_anime/view/screens/my_list/my_list.dart';
+import 'package:yuko_anime/view/screens/profile/profile.dart';
+import 'package:yuko_anime/view/screens/shop/shop.dart';
 
 import '../../home/home.dart';
 

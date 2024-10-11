@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../utils/constants.dart';
 
-class GonresItem extends StatelessWidget {
+class GenresItem extends StatelessWidget {
   final String category;
   final String imgPath;
-  const GonresItem({super.key, required this.category, required this.imgPath});
+  const GenresItem({super.key, required this.category, required this.imgPath});
 
   @override
   Widget build(BuildContext context) {

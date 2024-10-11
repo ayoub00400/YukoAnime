@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 import '../../../../model/anime.dart';
 import '../../../../repositories/remote/anime/anime_repository_impl.dart';
@@ -31,7 +30,7 @@ class ViewAllAnimesCubit extends Cubit<ViewAllAnimesState> {
         limit: limit,
       );
       emit(TopTrendingAnimeLoaded());
-    } on Exception catch (e) {
+    } on Exception {
       emit(TopTrendingAnimeLoadingFailed());
     }
   }
@@ -46,7 +45,7 @@ class ViewAllAnimesCubit extends Cubit<ViewAllAnimesState> {
       );
       topTrendingAnimeList.addAll(result);
       emit(TopTrendingAnimeLoaded());
-    } on Exception catch (e) {
+    } on Exception {
       emit(TopTrendingAnimeLoadingFailed());
     }
   }

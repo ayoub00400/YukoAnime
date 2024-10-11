@@ -1,4 +1,4 @@
-import 'package:template_project/model/manga.dart';
+import 'package:yuko_anime/model/manga.dart';
 
 abstract class MangaRepository {
   Future<List<Manga>> getTopTrendingMangaList({

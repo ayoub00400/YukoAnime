@@ -1,8 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:template_project/utils/extensions/extension_padding.dart';
+import 'package:yuko_anime/utils/extensions/extension_padding.dart';
 
 import '../../../../utils/constants.dart';
 

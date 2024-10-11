@@ -3,11 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:flutter/material.dart';
-import 'package:template_project/utils/constants.dart';
+import 'package:yuko_anime/utils/constants.dart';
 
 import 'cubit/app_layout_cubit.dart';
 import 'widgets/bottom_navbar_item.dart';
-import 'widgets/drawer_widget.dart';
 
 class AppLayoutScreen extends StatefulWidget {
   const AppLayoutScreen({super.key});

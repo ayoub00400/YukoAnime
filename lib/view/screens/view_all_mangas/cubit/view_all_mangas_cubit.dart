@@ -1,10 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
-import 'package:template_project/model/manga.dart';
+import 'package:yuko_anime/model/manga.dart';
 
-import '../../../../model/anime.dart';
-import '../../../../repositories/remote/anime/anime_repository_impl.dart';
 import '../../../../repositories/remote/manga/manga_repository_impl.dart';
 
 part 'view_all_mangas_state.dart';
@@ -33,7 +30,7 @@ class ViewAllMangasCubit extends Cubit<ViewAllMangasState> {
         limit: limit,
       );
       emit(TopTrendingMangaLoaded());
-    } on Exception catch (e) {
+    } on Exception {
       emit(TopTrendingMangaLoadingFailed());
     }
   }
@@ -48,7 +45,7 @@ class ViewAllMangasCubit extends Cubit<ViewAllMangasState> {
       );
       topTrendingMangaList.addAll(result);
       emit(TopTrendingMangaLoaded());
-    } on Exception catch (e) {
+    } on Exception {
       emit(TopTrendingMangaLoadingFailed());
     }
   }

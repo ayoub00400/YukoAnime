@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template_project/utils/constants.dart';
+import 'package:yuko_anime/utils/constants.dart';
 
 import '../../../../config/routes/routing_manager.dart';
 import '../../../common/error_widget.dart';

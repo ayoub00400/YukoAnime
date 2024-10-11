@@ -1,9 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:template_project/model/manga.dart';
-import 'package:template_project/repositories/remote/anime/anime_repository.dart';
-import 'package:template_project/repositories/remote/anime/anime_repository_impl.dart';
-import 'package:template_project/repositories/remote/manga/manga_repository_impl.dart';
+import 'package:yuko_anime/model/manga.dart';
+import 'package:yuko_anime/repositories/remote/anime/anime_repository_impl.dart';
+import 'package:yuko_anime/repositories/remote/manga/manga_repository_impl.dart';
 
 import '../../../../model/anime.dart';
 
@@ -26,7 +25,7 @@ class HomeCubit extends Cubit<HomeState> {
         limit: limit,
       );
       emit(TopTrendingAnimeLoaded());
-    } on Exception catch (e) {
+    } on Exception {
       emit(TopTrendingAnimeLoadingFailed());
     }
   }
@@ -39,7 +38,7 @@ class HomeCubit extends Cubit<HomeState> {
         limit: limit,
       );
       emit(TopTrendingMangaLoaded());
-    } on Exception catch (e) {
+    } on Exception {
       emit(TopTrendingMangaLoadingFailed());
     }
   }

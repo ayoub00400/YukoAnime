@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template_project/utils/constants.dart';
+import 'package:yuko_anime/utils/constants.dart';
 
 import '../../../common/magra_card.dart';
 

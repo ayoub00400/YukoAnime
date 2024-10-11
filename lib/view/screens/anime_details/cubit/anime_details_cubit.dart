@@ -1,7 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:chewie/chewie.dart';
 import 'package:meta/meta.dart';
-import 'package:video_player/video_player.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../../model/anime.dart';

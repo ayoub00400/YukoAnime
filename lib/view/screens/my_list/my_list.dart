@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/common/app_bar_widget.dart';
-import 'package:template_project/view/screens/my_list/widgets/recently_added_section.dart';
+import 'package:yuko_anime/utils/constants.dart';
+import 'package:yuko_anime/view/common/app_bar_widget.dart';
+import 'package:yuko_anime/view/screens/my_list/widgets/recently_added_section.dart';
 
 import 'widgets/filter_section.dart';
 

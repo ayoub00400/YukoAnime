@@ -3,10 +3,10 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template_project/config/routes/routing_manager.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/common/anime_card_2.dart';
-import 'package:template_project/view/screens/home/cubit/home_cubit.dart';
+import 'package:yuko_anime/config/routes/routing_manager.dart';
+import 'package:yuko_anime/utils/constants.dart';
+import 'package:yuko_anime/view/common/anime_card_2.dart';
+import 'package:yuko_anime/view/screens/home/cubit/home_cubit.dart';
 
 import '../../../common/error_widget.dart';
 import '../../../common/loading_widget.dart';

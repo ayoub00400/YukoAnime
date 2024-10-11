@@ -1,10 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template_project/view/screens/home/widgets/manga_section.dart';
-import 'package:template_project/view/screens/view_all_animes/cubit/view_all_animes_cubit.dart';
+import 'package:yuko_anime/view/screens/view_all_animes/cubit/view_all_animes_cubit.dart';
 
 import '../../../config/routes/routing_manager.dart';
 import '../../../utils/constants.dart';

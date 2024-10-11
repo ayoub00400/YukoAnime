@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:template_project/utils/constants.dart';
-import 'package:template_project/view/screens/profile_settings/widgets/settings_zone.dart';
+import 'package:yuko_anime/utils/constants.dart';
+import 'package:yuko_anime/view/screens/profile_settings/widgets/settings_zone.dart';
 
 class ConfidentialInfosSection extends StatelessWidget {
   const ConfidentialInfosSection({super.key});
