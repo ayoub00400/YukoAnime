@@ -7,6 +7,7 @@ import 'package:yuko_anime/utils/extensions/extension_padding.dart';
 import '../../../common/icon_button_widget.dart';
 import 'featured_anime_item.dart';
 
+// ignore: must_be_immutable
 class FeaturedAnimeSection extends StatelessWidget {
   PageController myPageViewController = PageController(initialPage: 0);
   var featuredAnimeList = List.generate(4, (index) => const FeaturedAnimeItem());

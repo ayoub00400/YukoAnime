@@ -19,8 +19,7 @@ class GenresCubit extends Cubit<GenresState> {
       emit(AnimeGenresLoading());
       animeGenresList = await genreRepositoryImpl.getAnimeGenres();
       emit(AnimeGenresLoaded());
-    } on Exception catch (e) {
-      // TODO
+    } on Exception {
       emit(AnimeGenresLoadingFailed());
     }
   }
@@ -30,8 +29,7 @@ class GenresCubit extends Cubit<GenresState> {
       emit(MangaGenresLoading());
       mangaGenresList = await genreRepositoryImpl.getMangaGenres();
       emit(MangaGenresLoaded());
-    } on Exception catch (e) {
-      // TODO
+    } on Exception {
       emit(MangaGenresLoadingFailed());
     }
   }

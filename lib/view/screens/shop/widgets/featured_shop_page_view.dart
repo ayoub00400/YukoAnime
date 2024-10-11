@@ -6,6 +6,7 @@ import 'package:yuko_anime/utils/constants.dart';
 
 import 'featured_shop_item.dart';
 
+// ignore: must_be_immutable
 class FeaturedShopSection extends StatelessWidget {
   PageController myPageViewController = PageController(initialPage: 0);
   var featuredAnimeList = List.generate(4, (index) => const FeaturedShopItem());

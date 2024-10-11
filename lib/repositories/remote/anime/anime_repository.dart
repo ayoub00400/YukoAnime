@@ -7,4 +7,7 @@ abstract class AnimeRepository {
     String? rating,
     bool sfw = true,
   });
+  Future<dynamic> getAnimeCharacters({
+    required int animeId,
+  });
 }

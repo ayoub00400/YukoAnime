@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yuko_anime/utils/constants.dart';
 
+// ignore: must_be_immutable
 class EpisodesFilter extends StatelessWidget {
   List<String> seasons = ["season 01", "season 02", "season 03"];
   EpisodesFilter({super.key});

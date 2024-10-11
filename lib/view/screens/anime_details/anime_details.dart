@@ -26,7 +26,9 @@ class _AnimeDetailsScreenState extends State<AnimeDetailsScreen> {
   Widget build(BuildContext context) {
     final animeDetailsCubit = AnimeDetailsCubit(widget.animeData);
     return BlocProvider(
-      create: (context) => animeDetailsCubit..loadTrailer(),
+      create: (context) => animeDetailsCubit
+        ..loadTrailer()
+        ..loadAnimeCharacters(widget.animeData.malId),
       child: Scaffold(
         backgroundColor: AppColorsPallette.darkThemeColors.first,
         body: SafeArea(

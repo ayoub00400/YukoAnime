@@ -27,6 +27,7 @@ class EpisodesList extends StatelessWidget {
                 : Padding(
                     padding: const EdgeInsets.symmetric(horizontal: AppSizes.smallPadding),
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(
@@ -50,19 +51,19 @@ class EpisodesList extends StatelessWidget {
                       ],
                     ),
                   ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: AppSizes.smallPadding),
-              child: EpisodesFilter(),
-            ),
-            Column(
-                mainAxisSize: MainAxisSize.min,
-                children: List.generate(
-                    10,
-                    (index) => const HorizontalAnimeCard2(
-                          animeTitle: "dqsf",
-                          animeType: "Searies",
-                          imgPath: "",
-                        ))),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(vertical: AppSizes.smallPadding),
+            //   child: EpisodesFilter(),
+            // ),
+            // Column(
+            //     mainAxisSize: MainAxisSize.min,
+            //     children: List.generate(
+            //         10,
+            //         (index) => const HorizontalAnimeCard2(
+            //               animeTitle: "dqsf",
+            //               animeType: "Searies",
+            //               imgPath: "",
+            //             ))),
           ],
         );
       },

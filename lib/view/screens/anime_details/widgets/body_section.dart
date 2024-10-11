@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'anime_characters.dart';
 import 'episodes_list.dart';
 
 class BodySection extends StatefulWidget {
@@ -15,7 +16,7 @@ class _BodySectionState extends State<BodySection> with SingleTickerProviderStat
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 1, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
   }
 
   @override
@@ -29,7 +30,9 @@ class _BodySectionState extends State<BodySection> with SingleTickerProviderStat
             dividerHeight: 0.1,
 
             // <-- Your TabBar
-            onTap: (value) {},
+            onTap: (value) {
+              _pageIndex.value = value;
+            },
             automaticIndicatorColorAdjustment: true,
             isScrollable: true,
             controller: _tabController,
@@ -39,6 +42,9 @@ class _BodySectionState extends State<BodySection> with SingleTickerProviderStat
               Tab(
                 child: Text('Episodes'),
               ),
+              Tab(
+                child: Text('Characters'),
+              ),
             ],
           ),
         ),
@@ -47,7 +53,7 @@ class _BodySectionState extends State<BodySection> with SingleTickerProviderStat
             builder: (context, value, child) {
               return IndexedStack(
                 index: _pageIndex.value,
-                children: const [Expanded(child: EpisodesList())],
+                children: [Expanded(child: EpisodesList()), Expanded(child: AnimeCharactersList())],
               );
             }),
       ],
