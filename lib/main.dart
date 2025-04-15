@@ -18,6 +18,7 @@ class YukoAnimeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Yuko Anime',
+      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       routerConfig: RoutingManager.router,
     );
