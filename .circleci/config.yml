@@ -2,19 +2,11 @@ version: 2.1
 
 jobs:
   build_apk:
-    machine:
-      image: ubuntu-2204:2024.01.2
+    docker:
+      - image: instrumentisto/flutter:latest
       
     steps:
-      - checkout
-      - run:
-          name: Install Flutter
-          command: |
-            git clone https://github.com/flutter/flutter.git -b stable
-            echo 'export PATH="$PATH:`pwd`/flutter/bin"' >> $BASH_ENV
-            source $BASH_ENV
-            flutter doctor
-          
+      - checkout    
       - run:
           name: "Install Java 17"
           command: |
