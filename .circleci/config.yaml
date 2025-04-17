@@ -1,0 +1,33 @@
+version: 2.1
+
+
+#josb is for listing jobs that gonna run in my worklow
+jobs:
+#here i give it name 
+setup_flutter:
+
+  #this is the execution environment 
+  docker:
+    - image: instrumentisto/flutter:stable
+  steps:
+    - checkout
+    - run :
+        name: "flutter doctor"
+        command: "flutter doctor"
+    - run :
+        name: "flutter pub get"
+        command: "flutter pub get"    
+    
+build:
+  jobs:
+    - setup_flutter
+    - run :
+        name: "flutter build apk"
+        command: "flutter build apk"
+
+workflows:
+  build:
+    jobs:
+      - build
+      
+      
