@@ -1,32 +1,31 @@
 version: 2.1
 
 jobs:
-  setup_flutter:
-    docker:
-      - image: instrumentisto/flutter:latest
-    steps:
-      - checkout
-      - run:
-          name: "Flutter Doctor"
-          command: flutter doctor
-      - run:
-          name: "Flutter Pub Get"
-          command: flutter pub get
-
   build_apk:
-    docker:
-      - image: instrumentisto/flutter:latest
+    machine:
+      image: ubuntu-2204:2024.01.2
+      
     steps:
       - checkout
+      - run:
+          name: Install Flutter
+          command: |
+            git clone https://github.com/flutter/flutter.git -b stable
+            echo 'export PATH="$PATH:`pwd`/flutter/bin"' >> $BASH_ENV
+            source $BASH_ENV
+            flutter doctor
+          
+      - run:
+          name: "Install Java 17"
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y openjdk-17-jdk
       - run:
           name: "Flutter Build APK"
           command: flutter build apk
 
 workflows:
-  version: 2
   build:
     jobs:
-      - setup_flutter
-      - build_apk:
-          requires:
-            - setup_flutter
+      - build_apk
+         
