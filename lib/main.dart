@@ -20,6 +20,7 @@ class YukoAnimeApp extends StatelessWidget {
       title: 'Yuko Anime',
       debugShowCheckedModeBanner: false,
       routerConfig: RoutingManager.router,
+      builder: (context, child) => child ?? const SizedBox.shrink(),
     );
   }
 }
