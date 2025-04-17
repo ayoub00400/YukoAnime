@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  setup_flutter:
+    docker:
+      - image: instrumentisto/flutter:stable
+    steps:
+      - checkout
+      - run:
+          name: "Flutter Doctor"
+          command: flutter doctor
+      - run:
+          name: "Flutter Pub Get"
+          command: flutter pub get
+
+  build_apk:
+    docker:
+      - image: instrumentisto/flutter:stable
+    steps:
+      - checkout
+      - run:
+          name: "Flutter Build APK"
+          command: flutter build apk
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - setup_flutter
+      - build_apk:
+          requires:
+            - setup_flutter
