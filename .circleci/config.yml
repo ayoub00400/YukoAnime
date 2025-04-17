@@ -15,7 +15,7 @@ jobs:
 
   build_apk:
     docker:
-      - image: instrumentisto/flutter:stable
+      - image: instrumentisto/flutter:latest
     steps:
       - checkout
       - run:
