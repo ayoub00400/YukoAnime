@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   setup_flutter:
     docker:
-      - image: cirrusci/flutter:latest
+      - image: instrumentisto/flutter:latest
     steps:
       - checkout
       - run:
